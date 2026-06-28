@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Aquilarium</title>
+      <link>https://linz1430.github.io/aquilarium</link>
+      <description>Last 10 notes on Aquilarium</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Tag Index</title>
+    <link>https://linz1430.github.io/aquilarium/tags/</link>
+    <guid>https://linz1430.github.io/aquilarium/tags/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sun, 28 Jun 2026 13:02:45 GMT</pubDate>
+  </item><item>
+    <title>关于我</title>
+    <link>https://linz1430.github.io/aquilarium/about</link>
+    <guid>https://linz1430.github.io/aquilarium/about</guid>
+    <description><![CDATA[ 关于林芷秋 ]]></description>
+    <pubDate>Sun, 28 Jun 2026 12:49:04 GMT</pubDate>
+  </item><item>
+    <title>Aquilarium</title>
+    <link>https://linz1430.github.io/aquilarium/</link>
+    <guid>https://linz1430.github.io/aquilarium/</guid>
+    <description><![CDATA[ 林芷秋的个人知识库 ]]></description>
+    <pubDate>Sun, 28 Jun 2026 12:49:04 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
