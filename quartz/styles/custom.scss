@@ -36,9 +36,23 @@
   }
 
   .callout-content {
-    p {
+    // Two-column info row: **label** · value
+    > p:has(strong) {
+      display: flex;
       margin: 0;
+      padding: 0.25rem 0.35rem;
       line-height: 1.5;
+      border-bottom: 1px solid #eaecf0;
+
+      strong {
+        flex: 0 0 40%;
+        font-weight: 700;
+        color: #202122;
+      }
+    }
+
+    > p:empty {
+      display: none;
     }
 
     // Section headers inside infobox (### Title)
@@ -52,43 +66,6 @@
       color: #202122;
     }
   }
-
-  // Wikipedia-style two-column info rows
-  table {
-    width: 100%;
-    margin: 0;
-    font-size: 0.82rem;
-    border-collapse: collapse;
-
-    tr {
-      border-bottom: 1px solid #eaecf0;
-
-      &:last-child {
-        border-bottom: none;
-      }
-    }
-
-    th, td {
-      padding: 0.25rem 0.35rem;
-      vertical-align: top;
-      border: none;
-    }
-
-    th {
-      width: 45%;
-      white-space: nowrap;
-      font-weight: 700;
-      color: #202122;
-      background: none;
-      text-align: left;
-    }
-
-    td {
-      color: #202122;
-      line-height: 1.5;
-    }
-  }
-}
 
 // Float infobox below on narrow screens
 @media (max-width: 768px) {
