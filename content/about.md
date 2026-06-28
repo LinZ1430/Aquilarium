@@ -1,6 +1,6 @@
 ---
-title: 关于我
-description: 关于林芷秋
+title: 关于
+description: 关于本站与作者
 ---
 
 # 关于我
