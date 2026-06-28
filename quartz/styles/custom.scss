@@ -37,24 +37,55 @@
 
   .callout-content {
     p {
-      margin: 0.15rem 0;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    // Section headers inside infobox (### Title)
+    h3 {
+      margin: 0;
+      padding: 0.25rem 0.35rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-align: center;
+      background: #eaecf0;
+      color: #202122;
     }
   }
 
+  // Wikipedia-style two-column info rows
   table {
     width: 100%;
     margin: 0;
     font-size: 0.82rem;
     border-collapse: collapse;
 
+    tr {
+      border-bottom: 1px solid #eaecf0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
     th, td {
-      padding: 0.15rem 0.3rem;
+      padding: 0.25rem 0.35rem;
       vertical-align: top;
       border: none;
     }
+
     th {
+      width: 45%;
       white-space: nowrap;
-      font-weight: 600;
+      font-weight: 700;
+      color: #202122;
+      background: none;
+      text-align: left;
+    }
+
+    td {
+      color: #202122;
+      line-height: 1.5;
     }
   }
 }
