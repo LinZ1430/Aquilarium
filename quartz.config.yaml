@@ -17,30 +17,30 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: EB Garamond
+      body: Inter
+      code: JetBrains Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#ffffff"
+        lightgray: "#f6f6f6"
+        gray: "#a2a9b1"
+        darkgray: "#54595d"
+        dark: "#202122"
+        secondary: "#3366cc"
+        tertiary: "#795cb2"
+        highlight: rgba(51, 102, 204, 0.08)
+        textHighlight: "#ffff0088"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#1e1e1e"
+        lightgray: "#2d2d2d"
+        gray: "#666666"
+        darkgray: "#cccccc"
+        dark: "#e8e8e8"
+        secondary: "#6d8cff"
+        tertiary: "#a78bfa"
+        highlight: rgba(109, 140, 255, 0.12)
+        textHighlight: "#8a7e2b88"
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true
@@ -134,8 +134,8 @@ plugins:
   - source: github:quartz-community/graph
     enabled: true
     layout:
-      position: right
-      priority: 10
+      position: afterBody
+      priority: 100
   - source: github:quartz-community/search
     enabled: true
     layout:
@@ -199,8 +199,7 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        GitHub: https://github.com/LinZ1430/Aquilarium
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
