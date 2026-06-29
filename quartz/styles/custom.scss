@@ -224,7 +224,7 @@ a.internal {
       "grid-footer";
   }
 
-  // Sidebars: compact horizontal
+  // Sidebars: compact horizontal, above content
   .left.sidebar, .right.sidebar {
     position: static !important;
     height: auto !important;
@@ -232,6 +232,7 @@ a.internal {
     padding: 0.75rem 1.25rem !important;
     gap: 0.5rem !important;
     flex-wrap: wrap;
+    z-index: auto !important;
   }
 
   .right.sidebar > * {
@@ -251,11 +252,13 @@ a.internal {
     padding-left: 0.25rem;
   }
 
-  // Infobox: full width
+  // Infobox: full width, no overlay
   .callout[data-callout="infobox"] {
     float: none;
     width: 100%;
     margin: 0.5rem 0 1rem 0;
+    position: static;
+    z-index: auto;
   }
 
   // Article padding
