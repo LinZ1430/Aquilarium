@@ -1,21 +1,100 @@
 @use "./variables.scss" as *;
 
+// Narrower right sidebar
+.page > #quartz-body {
+  grid-template-columns: 280px auto 240px;
+}
+
+// Backlinks: 3 columns + rename + visible divider
+.backlinks {
+  border-top: 1px solid #a2a9b1;
+  padding-top: 0.75rem;
+  margin-top: 1rem;
+
+  h3 {
+    visibility: hidden;
+    font-size: 0;
+
+    &::after {
+      content: "参考";
+      visibility: visible;
+      font-size: 1.1rem;
+    }
+  }
+
+  .overflow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem 1rem;
+
+    li {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+// Rename TOC heading
+.toc h3 {
+  visibility: hidden;
+  font-size: 0;
+
+  &::after {
+    content: "目录";
+    visibility: visible;
+    font-size: 1.1rem;
+  }
+}
+
+// Explorer heading
+.explorer .title-button h2 {
+  font-size: 1.1rem;
+}
+
+// Consistent left alignment in sidebar
+.left.sidebar {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+// Fix explorer text clipping — ensure enough vertical space
+.explorer {
+  .tree-item-self {
+    line-height: 1.7;
+    padding: 0.25rem 0;
+    min-height: 1.7em;
+  }
+
+  .overflow {
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    padding-bottom: 2rem;
+  }
+}
+
 // Wikipedia-style infobox
 .callout[data-callout="infobox"] {
-  --callout-icon: none;
-  --callout-color: transparent;
+  --color: #202122;
+  --border: #a2a9b1;
+  --bg: #f8f9fa;
   float: right;
+  shape-outside: inset(0);
   width: 280px;
   max-width: 100%;
   margin: 0.5rem 0 1.5rem 1.5rem;
+  position: relative;
+  z-index: 1;
   padding: 0;
   font-size: 0.85rem;
   line-height: 1.5;
+  border-radius: 0;
   background: #f8f9fa;
   border: 1px solid #a2a9b1;
-  border-radius: 0;
-  border-left: 1px solid #a2a9b1;
-  overflow: hidden;
+
+  .callout-icon {
+    display: none;
+  }
 
   .callout-title {
     display: flex;
@@ -26,50 +105,100 @@
     font-size: 1rem;
     font-weight: 700;
     text-align: center;
+    color: #202122;
     border-bottom: 1px solid #a2a9b1;
-    background: none;
+    gap: 0;
+
+    .fold-callout-icon {
+      display: none;
+    }
+
+    .callout-title-inner > p {
+      margin: 0;
+      color: #202122;
+    }
 
     small {
-      display: block;
-      font-size: 0.82rem;
+      font-size: inherit;
       font-weight: 400;
       color: #54595d;
-      margin-top: 0.1rem;
     }
   }
 
   .callout-content {
-    // All paragraphs become two-column info rows
+    display: block;
+
     > p {
       display: flex;
+      align-items: center;
       margin: 0;
       padding: 0.25rem 0.6rem;
       line-height: 1.5;
       border-bottom: 1px solid #eaecf0;
+      color: #202122;
 
       strong {
-        flex: 0 0 40%;
+        flex: 0 0 30%;
         font-weight: 700;
         color: #202122;
       }
-
-      &:empty {
-        display: none;
-      }
     }
 
-    // Section headers inside infobox (### Title)
-    h3 {
-      margin: 0;
-      padding: 0.25rem 0.6rem;
-      font-size: 0.82rem;
-      font-weight: 700;
-      text-align: center;
-      background: #eaecf0;
-      color: #202122;
+    > p:last-child {
+      border-bottom: none;
     }
   }
 }
+
+// Ensure the content area allows floats
+article,
+.center,
+.markdown-preview-view {
+  overflow: visible !important;
+  contain: none !important;
+}
+
+// No element clears the infobox float — all wrap beside it
+.markdown-preview-view {
+  h1, h2, h3, h4, h5, h6, hr, p, ul, ol, table, .table-container, blockquote:not(.infobox) {
+    clear: none !important;
+  }
+}
+
+// hr: Wikipedia-style divider, tight spacing
+article hr {
+  width: auto;
+  height: 1px;
+  background: #a2a9b1;
+  margin: 0;
+}
+
+// Tight h3 + divider spacing
+article h3 {
+  margin-bottom: 0;
+}
+
+article hr {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+
+  & + * {
+    margin-top: 0;
+  }
+}
+
+
+// Links: no bold, no background
+article a, .backlinks a {
+  font-weight: normal;
+}
+
+a.internal {
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0;
+}
+
 
 // Float infobox below on narrow screens
 @media (max-width: 768px) {

@@ -73,7 +73,7 @@ plugins:
     order: 50
     layout:
       position: right
-      priority: 30
+      priority: 10
   - source: github:quartz-community/crawl-links
     enabled: true
     options:
@@ -132,10 +132,7 @@ plugins:
       position: left
       priority: 50
   - source: github:quartz-community/graph
-    enabled: true
-    layout:
-      position: afterBody
-      priority: 100
+    enabled: false
   - source: github:quartz-community/search
     enabled: true
     layout:
@@ -147,8 +144,8 @@ plugins:
   - source: github:quartz-community/backlinks
     enabled: true
     layout:
-      position: right
-      priority: 50
+      position: afterBody
+      priority: 20
   - source: github:quartz-community/article-title
     enabled: true
     layout:
@@ -203,13 +200,7 @@ plugins:
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
-    enabled: true
-    options: {}
-    order: 25
-    layout:
-      position: left
-      priority: 25
-      display: mobile-only
+    enabled: false
   - source: github:quartz-community/bases-page
     enabled: true
     options: {}
@@ -218,11 +209,9 @@ plugins:
     enabled: true
     options:
       includeAll: false
-      includedProperties:
+      includedProperties: []
+      excludedProperties:
         - description
-        - tags
-        - aliases
-      excludedProperties: []
       hidePropertiesView: false
       delimiters: ---
       language: yaml

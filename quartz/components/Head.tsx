@@ -94,6 +94,7 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+        <script>{`(function r(){var h=document.querySelector('.explorer .title-button h2');if(h){h.textContent='词条一览'}else{setTimeout(r,200)}})()`}</script>
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
