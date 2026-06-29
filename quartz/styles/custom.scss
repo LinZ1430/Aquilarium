@@ -200,11 +200,82 @@ a.internal {
 }
 
 
-// Float infobox below on narrow screens
-@media (max-width: 768px) {
+// ── Mobile ──
+@media (max-width: 800px) {
+  // Stack to single column
+  .page > #quartz-body {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "grid-sidebar-left"
+      "grid-header"
+      "grid-center"
+      "grid-sidebar-right"
+      "grid-footer";
+  }
+
+  // Sidebars: compact horizontal
+  .left.sidebar, .right.sidebar {
+    position: static !important;
+    height: auto !important;
+    flex-direction: row !important;
+    padding: 0.5rem 1rem !important;
+    gap: 0.5rem !important;
+    flex-wrap: wrap;
+  }
+
+  .right.sidebar > * {
+    flex: 1 1 auto;
+    min-width: 200px;
+    max-height: none !important;
+  }
+
+  // Explorer: compact
+  .explorer .overflow {
+    max-height: 50vh;
+  }
+
+  // Infobox: full width
   .callout[data-callout="infobox"] {
     float: none;
     width: 100%;
-    margin: 1rem 0;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  // Article padding
+  .center > article {
+    padding: 0 1rem;
+  }
+
+  // Page header compact
+  .page-header {
+    margin-top: 0.5rem !important;
+    padding: 0 1rem;
+  }
+
+  // Smaller headings
+  h1 { font-size: 1.5rem !important; }
+  h2 { font-size: 1.25rem !important; }
+  h3 { font-size: 1.1rem !important; }
+  .article-title { font-size: 1.4rem !important; }
+
+  // Backlinks: 2 columns
+  .backlinks .overflow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Restore right sidebar visibility
+  .sidebar.right {
+    display: flex !important;
+  }
+}
+
+// Extra small screens (phones)
+@media (max-width: 480px) {
+  .backlinks .overflow {
+    grid-template-columns: 1fr;
+  }
+
+  .left.sidebar {
+    font-size: 0.9rem;
   }
 }
