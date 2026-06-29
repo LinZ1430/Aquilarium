@@ -264,9 +264,14 @@ a.internal {
   h3 { font-size: 1.1rem !important; }
   .article-title { font-size: 1.4rem !important; }
 
-  // Backlinks: 2 columns
+  // Backlinks: 2 columns, no indent
+  .backlinks {
+    padding-left: 0;
+    margin-left: 0;
+  }
   .backlinks .overflow {
     grid-template-columns: repeat(2, 1fr);
+    padding-left: 0;
   }
 
   // Restore right sidebar visibility
