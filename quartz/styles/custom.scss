@@ -128,6 +128,17 @@
   .callout-content {
     display: block;
 
+    // Section headers inside infobox
+    > h3 {
+      margin: 0;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-align: center;
+      background: #eaecf0;
+      color: #202122;
+    }
+
     > p {
       display: flex;
       align-items: center;
