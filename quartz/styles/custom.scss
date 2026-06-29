@@ -263,6 +263,10 @@ a.internal {
     margin: 0.5rem 0 1rem 0;
     position: static;
     z-index: auto;
+
+    .callout-content > h3 {
+      font-size: 0.95rem;
+    }
   }
 
   // Article padding
