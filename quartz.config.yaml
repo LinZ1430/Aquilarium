@@ -8,7 +8,7 @@ configuration:
     provider: plausible
     enabled: false
   locale: en-US
-  baseUrl: linz1430.github.io/Aquilarium
+  baseUrl: wiki.aquilarium.org
   ignorePatterns:
     - private
     - templates
