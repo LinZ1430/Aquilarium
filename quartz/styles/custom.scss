@@ -137,6 +137,10 @@
       text-align: center;
       background: #eaecf0;
       color: #202122;
+
+      a[role="anchor"] {
+        display: none;
+      }
     }
 
     > p {
