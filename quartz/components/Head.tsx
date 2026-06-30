@@ -94,7 +94,10 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
-        <script>{`(function r(){var h=document.querySelector('.explorer .title-button h2');if(h){h.textContent='词条一览'}else{setTimeout(r,200)}})()`}</script>
+        <script>{`
+(function r(){var h=document.querySelector('.explorer .title-button h2');if(h){h.textContent='词条一览'}else{setTimeout(r,200)}})();
+(function(){function hide(){var as=document.querySelectorAll('.backlinks a.internal');as.forEach(function(a){if(a.getAttribute('href').match(/^\\.\\.\\/\\.\\.\\/$/)||a.textContent==='踏足大地，翱翔天际。'){var li=a.closest('li');if(li)li.style.display='none'}})}hide();setInterval(hide,500)})();
+        `}</script>
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js

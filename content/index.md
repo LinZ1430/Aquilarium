@@ -1,10 +1,8 @@
 ---
-title: Aquilarium
+title: 踏足大地，翱翔天际。
 ---
 
 ### Aquilarium · 鸟瞰点
-
-**踏足大地，翱翔天际。**
 
 欢迎来到 Project Resurrection 的世界观百科。本站目前收录了 **68** 个词条，涵盖这个世界的地理、历史、人物、概念与组织。
 

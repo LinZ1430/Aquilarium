@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
     enabled: false
-  locale: en-US
+  locale: zh-CN
   baseUrl: wiki.aquilarium.org
   ignorePatterns:
     - private

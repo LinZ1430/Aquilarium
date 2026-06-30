@@ -5,11 +5,26 @@
   grid-template-columns: 280px auto 240px;
 }
 
+// Footer spacing
+footer {
+  margin-top: 5rem;
+}
+
 // Backlinks: 3 columns + rename + visible divider
 .backlinks {
   border-top: 1px solid #a2a9b1;
   padding-top: 0.75rem;
   margin-top: 1rem;
+
+  // Hide homepage from backlinks (instant, no flash)
+  li:has(> a.internal[href$="../"]) {
+    display: none;
+  }
+
+  // Remove Quartz extra divider
+  hr {
+    display: none;
+  }
 
   h3 {
     visibility: hidden;
@@ -56,6 +71,57 @@
 .left.sidebar {
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
+}
+
+// Date above Quartz footer
+#quartz-body {
+  position: relative;
+}
+
+.content-meta {
+  position: absolute;
+  bottom: 6.25rem;
+  left: 285px;
+  font-size: 0.8rem;
+  color: var(--gray);
+
+  span {
+    display: none;
+  }
+
+  time::after {
+    display: none;
+  }
+}
+
+.content-meta time::before {
+  content: "最后修改：";
+}
+
+// ── Wikipedia-style spacing ──
+// Page title: dark, not blue
+.page-title a {
+  color: var(--dark) !important;
+  font-weight: 600;
+}
+
+// Content width: respectable Wikipedia proportions
+.center {
+  max-width: 960px;
+}
+
+// Body line spacing
+article {
+  line-height: 1.7;
+  p, li {
+    margin-bottom: 0.25rem;
+  }
+}
+
+// Right sidebar compact
+.right.sidebar {
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 // Fix explorer text clipping — ensure enough vertical space
