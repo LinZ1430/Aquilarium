@@ -372,10 +372,12 @@ a.external {
   h3 { font-size: 1.1rem !important; }
   .article-title { font-size: 1.4rem !important; }
 
-  // Backlinks: 2 columns, no indent
+  // Backlinks: 2 columns, scrollable
   .backlinks {
     padding-left: 0;
     margin-left: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .backlinks .overflow {
     grid-template-columns: repeat(2, 1fr);
