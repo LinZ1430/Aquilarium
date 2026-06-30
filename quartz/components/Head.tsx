@@ -96,7 +96,7 @@ export default (() => {
         <meta name="generator" content="Quartz" />
         <script>{`
 (function r(){var h=document.querySelector('.explorer .title-button h2');if(h){h.textContent='词条一览'}else{setTimeout(r,200)}})();
-(function(){function hb(){var as=document.querySelectorAll('.backlinks a.internal');var vis=0;as.forEach(function(a){var li=a.closest('li');if(!li)return;if(a.getAttribute('href').match(/^(\\.\\.\\/)+$/)||a.textContent==='漫步大地，翱翔天际。'||a.textContent==='关于本站'){li.style.display='none'}else{vis++}});var bl=document.querySelector('.backlinks');if(bl){bl.style.display=vis===0?'none':''}}hb();setInterval(hb,500)})();
+(function(){function hb(){var as=document.querySelectorAll('.backlinks a.internal');var vis=0;as.forEach(function(a){var li=a.closest('li');if(!li)return;if(a.getAttribute('href').match(/^(\\.\\.\\/)+$/)||a.textContent==='仰观天地，俯察社稷。'||a.textContent==='关于本站'){li.style.display='none'}else{vis++}});var bl=document.querySelector('.backlinks');if(bl){bl.style.display=vis===0?'none':''}}hb();setInterval(hb,500)})();
         `}</script>
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
