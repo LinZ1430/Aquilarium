@@ -16,8 +16,10 @@ footer {
   padding-top: 0.75rem;
   margin-top: 1rem;
 
-  // Hide homepage from backlinks (instant, no flash)
-  li:has(> a.internal[href$="../"]) {
+  // Hide homepage and about from backlinks
+  li:has(> a.internal[href$="../"]),
+  li:has(> a.internal[href$="/about"]),
+  li:has(> a.internal[href$="about"]) {
     display: none;
   }
 
