@@ -60,6 +60,11 @@ footer {
   }
 }
 
+// Explorer: use sans-serif everywhere
+.explorer * {
+  font-family: "Noto Sans SC", sans-serif !important;
+}
+
 // Explorer heading
 .explorer .title-button h2 {
   font-size: 1.1rem;
@@ -97,10 +102,16 @@ footer {
 }
 
 // ── Wikipedia-style spacing ──
-// Page title: dark, not blue
+// Page title: logo image
 .page-title a {
-  color: var(--dark) !important;
-  font-weight: 600;
+  display: block;
+  width: 360px;
+  height: 72px;
+  background: url("static/aquilarium-logo_3.png") no-repeat center / contain;
+  color: transparent !important;
+  font-size: 0;
+  overflow: visible;
+  margin-left: -90px;
 }
 
 // Content width: respectable Wikipedia proportions
@@ -331,6 +342,11 @@ a.internal {
     .callout-content h3 {
       font-size: 0.82rem !important;
     }
+  }
+
+  // Logo: mobile offset
+  .page-title a {
+    margin-left: -75px;
   }
 
   // Article padding

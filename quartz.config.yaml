@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
   pageTitle: Aquilarium
-  pageTitleSuffix: ""
+  pageTitleSuffix: " - Aquilarium"
   enableSPA: true
   enablePopovers: true
   analytics:
@@ -17,6 +17,7 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
+      title: EB Garamond
       header: Noto Serif SC
       body: Noto Sans SC
       code: JetBrains Mono
