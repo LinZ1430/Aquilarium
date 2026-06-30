@@ -49,6 +49,11 @@ jobs:
       - name: Install Quartz plugins
         run: npx quartz plugin install
 
+      - name: Patch fonts plugin
+        run: |
+          sed -i 's/Schibsted Grotesk/Noto Serif SC/g' .quartz/plugins/fonts/dist/emitter.js .quartz/plugins/fonts/dist/index.js
+          sed -i 's/Source Sans Pro/Noto Sans SC/g' .quartz/plugins/fonts/dist/emitter.js .quartz/plugins/fonts/dist/index.js
+
       - name: Build site
         run: npx quartz build
 
