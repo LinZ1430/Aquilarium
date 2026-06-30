@@ -278,15 +278,21 @@ article hr {
 }
 
 
-// Links: no bold, no background
+// Links: blue only, otherwise same as normal text
 article a, .backlinks a {
-  font-weight: normal;
+  font-weight: normal !important;
 }
 
 a.internal {
   background: none !important;
   padding: 0 !important;
   border-radius: 0;
+  color: var(--secondary) !important;
+  font-weight: inherit !important;
+}
+
+a.external {
+  font-weight: inherit !important;
 }
 
 
