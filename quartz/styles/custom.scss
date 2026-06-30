@@ -14,7 +14,7 @@ footer {
 .backlinks {
   border-top: 1px solid #a2a9b1;
   padding-top: 0.75rem;
-  margin-top: 1rem;
+  margin-top: 0;
 
   // Hide homepage and about from backlinks
   li:has(> a.internal[href$="../"]),
@@ -23,12 +23,8 @@ footer {
     display: none;
   }
 
-  // Remove Quartz extra divider
-  hr {
-    display: none;
-  }
-
   h3 {
+    margin-top: 0;
     visibility: hidden;
     font-size: 0;
 
